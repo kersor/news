@@ -23,7 +23,7 @@ const MobileMenu: FC<IMobileVisible> = ({visible, setVisibleMobileMenu}) => {
                 <a className='w-[100px] h-[100px] bg-[#FFF] text-[#e35c5c] flex justify-center items-center' href="">Subscribe</a>
             </div>
             <div className='grid grid-cols-3 gap-[5px]'> 
-              <a className='w-[65px] h-[65px] flex gap-[3px] bg-[#FFF] flex justify-center items-center' href="">
+              <a className='w-[65px] h-[65px] gap-[3px] bg-[#FFF] flex justify-center items-center' href="">
                 <SquarePen color='#e35c5c' size={15} strokeWidth={2.5} />
               </a>
               <button className='w-[65px] h-[65px] bg-[#FFF] relative after:absolute after:top-[50%] after:-translate-y-[90%] after:translate-x-[40%] after:w-[10px] after:h-[10px] after:bg-[#e35c5c] after:rounded-[10px] after:border-[2px] after:border-[#FFF] flex justify-center items-center'>
