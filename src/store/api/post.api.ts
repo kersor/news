@@ -9,10 +9,12 @@ export const postNews = createApi({
     endpoints: (builder) => ({
         getAllPosts: builder.query<IGetAllPosts, null> ({
             query: () => ({
-                url: '/top-headlines',
+                url: '/everything',
                 params: {
                     'apiKey': process.env.REACT_APP_API_KEY,
-                    'country': 'ru'
+                    'q': 'all',
+                    'language': 'ru',
+                    'pageSize': 10
                 }
             })
         })

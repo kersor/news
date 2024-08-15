@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <div className="max-w-[1300px] px-[15px] mx-auto flex items-center justify-between h-[110px] max-[600px]:h-[70px]">
         <div className='flex items-center gap-[30px]'>
-            <a className='text-[red] font-NewAmsterdam text-[50px] font-bold tracking-wider' href="">Buletin</a>
+            <a className='text-[#e25c5b] font-NewAmsterdam text-[50px] font-bold tracking-wider' href="">Buletin</a>
             <div className='w-[1px] h-[20px] bg-[#6e6e6e] max-[800px]:hidden'></div>
             <div className="flex gap-[30px] relative text-[14px] font-medium text-[#616161] max-[1100px]:gap-[10px] max-[800px]:hidden">
                 <a href="">Stories</a>

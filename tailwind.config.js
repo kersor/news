@@ -6,8 +6,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'NewAmsterdam': 'New Amsterdam'
-      }
+        'NewAmsterdam': 'New Amsterdam',
+        'Oswald': 'Oswald'
+      },
     },
   },
   plugins: [],

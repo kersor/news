@@ -7,7 +7,6 @@ interface IMobileVisible {
 }
 
 const MobileMenu: FC<IMobileVisible> = ({visible, setVisibleMobileMenu}) => {
-  console.log(visible)
   return (
     <div className={`fixed w-full h-screen transition-all duration-500 ${visible ? 'right-0 z-[1] opacity-1' : '-right-[100%] -z-[1] opacity-0'}  top-0  bg-[#e35c5c] px-[15px] `}>
         <div className="text-[#FFF]  w-full h-full"> 

@@ -1,0 +1,26 @@
+.link_full_state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 600;
+    color: #e4635d;
+
+    max-width: 110px;
+    height: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-top: 20px;
+
+    transition: all 0.2s ease;
+    border-bottom: 1px solid #e4635d;
+    &:hover{
+        transform: translate(2px, -2px);
+    }
+}
+
+@media (max-width: 1000px) {
+    .link_full_state {
+        margin-top: 10px;
+    }
+}
