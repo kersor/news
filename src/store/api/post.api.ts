@@ -12,9 +12,10 @@ export const postNews = createApi({
                 url: '/everything',
                 params: {
                     'apiKey': process.env.REACT_APP_API_KEY,
-                    'q': 'all',
+                    'q': 'technology',
                     'language': 'ru',
-                    'pageSize': 10
+                    'pageSize': 5,
+                    'sortBy': 'publishedAt'
                 }
             })
         })
