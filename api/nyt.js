@@ -1,19 +1,14 @@
 export default async function handler(req, res) {
-  const { path } = req.query; // массив сегментов после /nyt/
-  const API_KEY = process.env.VITE_API_TOKEN; // NYT API ключ из env
+  const { year, month, 'api-key': apiKey } = req.query;
 
-  if (!path || path.length < 2) {
-    res.status(400).json({ error: 'Invalid request' });
+  if (!year || !month || !apiKey) {
+    res.status(400).json({ error: 'year, month and api-key are required' });
     return;
   }
 
-  const year = path[0];
-  const monthFile = path[1]; // например "5.json"
-
-  const targetUrl = `https://api.nytimes.com/svc/archive/v1/${year}/${monthFile}?api-key=${API_KEY}`;
-
   try {
-    const response = await fetch(targetUrl);
+    const url = `https://api.nytimes.com/svc/archive/v1/${year}/${month}.json?api-key=${apiKey}`;
+    const response = await fetch(url);
     const data = await response.json();
     res.status(response.status).json(data);
   } catch (err) {
