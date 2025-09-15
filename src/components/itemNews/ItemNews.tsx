@@ -30,7 +30,10 @@ const ItemNews = ({
         <a href={news.web_url} target="_blank" className={styles.wrapper}>
             <div className={styles.photo}>
                 {imageUrl ? (
-                    <img src={imageUrl} alt={news.headline.main} />
+                    <img src={imageUrl} alt={news.headline.main}          
+                        loading="lazy"           
+                        decoding="async"  
+                    />
                 ) : (
                     <div className={styles.placeholder}>No image</div>
                 )}
