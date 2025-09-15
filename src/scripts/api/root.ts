@@ -9,12 +9,12 @@ interface GetPosts {
 export const rootApi = createApi({
   reducerPath: 'rootApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: '/api/nyt', // proxy путь
+    baseUrl: 'https://api.nytimes.com/svc/archive/v1', 
   }),
   endpoints: (build) => ({
     getPosts: build.query<NYTRequest, GetPosts>({
-      query: (body: GetPosts) => ({
-        url: `/${body.year}/${body.month}.json`, 
+      query: ({ year, month }) => ({
+        url: `/${year}/${month}.json`,
         params: { 'api-key': import.meta.env.VITE_API_TOKEN },
       }),
     }),
