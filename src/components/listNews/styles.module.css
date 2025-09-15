@@ -1,0 +1,37 @@
+.wrapper {
+    margin-top: 11px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title_date {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 32px;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 48px;
+    margin-bottom: 20px;
+}
+
+.loading_component {
+    animation: animation-loading 0.7s ease infinite
+}
+
+@keyframes animation-loading {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}

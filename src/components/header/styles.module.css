@@ -1,0 +1,29 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #EDEDED;
+    height: 72px;
+    position: relative;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.burger {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.container {
+    position: relative;
+}

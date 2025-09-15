@@ -1,0 +1,42 @@
+.wrapper {
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 25px;
+    padding: 40px 0;
+}
+
+.container > div {
+    display: flex;
+}
+
+.networks {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.copyright {
+    justify-content: center;
+    font-size: 12px;
+}
+
+.powered {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.powered > div {
+    font-size: 12px;
+}
+
+.networks div {
+    font-size: 12px;
+}
