@@ -12,7 +12,6 @@ const month = 5
 
 function App() {
   const firstIdRef = useRef("")
-  const [firstId, setFirstId] = useState("")
   const [params, setParams] = useState({
     year,
     month
@@ -31,7 +30,6 @@ function App() {
 
       if (firstIdRef.current === "") {
         const candidate_id = fn[0]._id
-        setFirstId(candidate_id)
         firstIdRef.current = candidate_id
       }
       setNews(prev => [...prev, ...fn])
@@ -51,7 +49,6 @@ function App() {
 
         setNews(prev => [candidate, ...prev])
         firstIdRef.current = candidate_id
-        setFirstId(candidate_id)
       }
     }, 30000)
 
