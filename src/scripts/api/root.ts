@@ -9,7 +9,7 @@ interface GetPosts {
 export const rootApi = createApi({
   reducerPath: 'rootApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: '/nyt/svc/archive/v1', // proxy путь
+    baseUrl: '/api/nyt', // proxy путь
   }),
   endpoints: (build) => ({
     getPosts: build.query<NYTRequest, GetPosts>({
