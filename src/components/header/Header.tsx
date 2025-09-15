@@ -12,7 +12,7 @@ const Header = ({
 
     const funcOnClickVisibleSidebar = () => {
         document.body.style.overflow = "hidden"
-        setVisibleSidebar(prev => true)
+        setVisibleSidebar(true)
     }
 
     return (

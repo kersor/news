@@ -13,7 +13,7 @@ function App() {
   const {data} = useGetPostsQuery()
   
   useEffect(() => {
-    if (data) setNews(prev => data.response.docs)
+    if (data) setNews(data.response.docs)
   }, [data])
 
  

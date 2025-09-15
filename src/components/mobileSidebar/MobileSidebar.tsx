@@ -15,7 +15,7 @@ const MobileSidebar = ({
 
     const funcOnClickVisibleSidebar = () => {
         document.body.style.overflow = ""
-        setVisibleSidebar(prev => false)
+        setVisibleSidebar(false)
     }
 
     return (

@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import styles from './styles.module.css'
 import type { NYTArticle } from '../../scripts/types/news.type'
 import Container from '../container/Container'
@@ -40,7 +40,7 @@ const ListNews = ({
         if (visibleCount >= sorted.length) return
         setLoading(true)
         setTimeout(() => { 
-            setVisibleCount((prev) => Math.min(prev + LOAD_COUNT, sorted.length))
+            setVisibleCount((v) => Math.min(v + LOAD_COUNT, sorted.length))
             setLoading(false)
         }, 1500)
     }
