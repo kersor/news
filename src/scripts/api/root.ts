@@ -14,7 +14,7 @@ export const rootApi = createApi({
   endpoints: (build) => ({
     getPosts: build.query<NYTRequest, GetPosts>({
       query: (body: GetPosts) => ({
-        url: `/${body.year}/${body.month}.json`, // обязательно прошлый месяц для работы
+        url: `/${body.year}/${body.month}.json`, 
         params: { 'api-key': import.meta.env.VITE_API_TOKEN },
       }),
     }),

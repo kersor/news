@@ -1,17 +1,23 @@
 export default async function handler(req, res) {
-  const { year, month } = req.query
-  const API_KEY = process.env.VITE_API_TOKEN 
+  const { path } = req.query; // массив сегментов после /nyt/
+  const API_KEY = process.env.VITE_API_TOKEN; // NYT API ключ из env
 
-  if (!year || !month) {
-    res.status(400).json({ error: 'year and month are required' })
-    return
+  if (!path || path.length < 2) {
+    res.status(400).json({ error: 'Invalid request' });
+    return;
   }
 
+  const year = path[0];
+  const monthFile = path[1]; // например "5.json"
+
+  const targetUrl = `https://api.nytimes.com/svc/archive/v1/${year}/${monthFile}?api-key=${API_KEY}`;
+
   try {
-    const response = await fetch(`https://api.nytimes.com/svc/archive/v1/${year}/${month}.json?api-key=${API_KEY}`)
-    const data = await response.json()
-    res.status(200).json(data)
+    const response = await fetch(targetUrl);
+    const data = await response.json();
+    res.status(response.status).json(data);
   } catch (err) {
-    res.status(500).json({ error: 'Failed to fetch NYT API' })
+    console.error('NYT API fetch error:', err);
+    res.status(500).json({ error: 'Failed to fetch NYT API' });
   }
 }
